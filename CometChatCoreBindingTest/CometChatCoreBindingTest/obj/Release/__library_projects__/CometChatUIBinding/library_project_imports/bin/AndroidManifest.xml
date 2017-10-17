@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cometchat.inscripts.com.readyui"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="15"
+        android:targetSdkVersion="25" />
+
+    <application
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:supportsRtl="true" >
+        <provider
+            android:name="helpers.GenericFileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true" >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <meta-data
+            android:name="DATABASE"
+            android:value="inscripts_cc.db" />
+        <meta-data
+            android:name="VERSION"
+            android:value="3" />
+        <meta-data
+            android:name="QUERY_LOG"
+            android:value="false" />
+        <meta-data
+            android:name="DOMAIN_PACKAGE_NAME"
+            android:value="models" />
+
+        <activity
+            android:name="activities.CometChatActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.Transparent" />
+        <activity
+            android:name="activities.CCSettingsActivity"
+            android:label="More"
+            android:theme="@style/Theme.Transparent" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="activities.CometChatActivity" />
+        </activity>
+        <activity
+            android:name="activities.CCSingleChatActivity"
+            android:configChanges="orientation"
+            android:theme="@style/Theme.Transparent"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="activities.CCImagePreviewActivity"
+            android:theme="@style/Theme.Transparent"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="activities.CCGroupChatActivity"
+            android:theme="@style/Theme.Transparent"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="activities.CCShowChatroomUsersActivity"
+            android:theme="@style/Theme.Transparent"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="activities.CCInviteUserActivity"
+            android:theme="@style/Theme.Transparent"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="activities.CCCreateChatroomActivity"
+            android:theme="@style/Theme.Transparent"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="activities.CCInviteViaSmsActivity"
+            android:label="@string/title_activity_cc_invite_via_sms"
+            android:theme="@style/Theme.Transparent" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="activities.CCSettingsActivity" />
+        </activity>
+        <activity
+            android:name="activities.CCSinglePlayerGameActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/title_activity_single_player_game"
+            android:theme="@style/Theme.Transparent" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="activities.CCSettingsActivity" />
+        </activity>
+        <activity
+            android:name="activities.CCViewProfileActivity"
+            android:label="@string/profile_title"
+            android:theme="@style/Theme.Transparent" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="activities.CCSettingsActivity" />
+        </activity>
+        <activity
+            android:name="activities.CCBotsActivity"
+            android:label="@string/title_activity_bots"
+            android:theme="@style/Theme.Transparent" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="activities.CCSettingsActivity" />
+        </activity>
+        <activity
+            android:name="activities.CCBotsDetailActivity"
+            android:label="@string/text_bot_details"
+            android:theme="@style/Theme.Transparent" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="activities.CCBotsActivity" />
+        </activity>
+        <activity
+            android:name="activities.CCSelectLanguageActivity"
+            android:label="@string/title_activity_select_language"
+            android:theme="@style/Theme.Transparent" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="activities.CCSettingsActivity" />
+        </activity>
+        <activity
+            android:name="activities.CCUnblockuserActivity"
+            android:label="@string/title_activity_unblockuser"
+            android:theme="@style/Theme.Transparent" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="activities.CCSettingsActivity" />
+        </activity>
+        <activity
+            android:name="activities.CCChatSettingsActivity"
+            android:label="@string/title_activity_notification_settings"
+            android:theme="@style/Theme.Transparent" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="activities.CCSettingsActivity" />
+        </activity>
+        <activity
+            android:name="activities.CCStatusMessageActivity"
+            android:label="@string/title_activity_status_message"
+            android:theme="@style/Theme.Transparent" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="activities.CCViewProfileActivity" />
+        </activity>
+        <activity
+            android:name="activities.CCUpdateStatusMessageActivity"
+            android:label="@string/title_update_status"
+            android:theme="@style/Theme.Transparent" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="activities.CCStatusMessageActivity" />
+        </activity>
+        <activity
+            android:name="cometchat.inscripts.com.readyui.CCBroadcastMessageActivity"
+            android:theme="@style/Theme.Transparent"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="videochat.CCIncomingCallActivity"
+            android:label="@string/title_activity_video_chat_popup"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Transparent" />
+        <activity
+            android:name="videochat.CCOutgoingCallActivity"
+            android:label="@string/title_activity_outgoing_call"
+            android:launchMode="singleTask"
+            android:theme="@style/Theme.Transparent" />
+        <activity
+            android:name="videochat.CCVideoChatActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/title_activity_video_chat"
+            android:launchMode="singleTask"
+            android:theme="@style/Theme.Transparent" />
+        <activity
+            android:name="activities.CCViewUserProfileActivity"
+            android:theme="@style/FullScreen" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="activities.CCSingleChatActivity" />
+        </activity>
+        <activity
+            android:name="activities.CCAnnouncementsActivity"
+            android:theme="@style/FullScreen" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="activities.CCSettingsActivity" />
+        </activity>
+        <activity
+            android:name="activities.CCInviteAVBroadcastUsers"
+            android:theme="@style/FullScreen" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="activities.CCSettingsActivity" />
+        </activity>
+
+        <receiver
+            android:name="receivers.NetworkChangeReceiver"
+            android:enabled="true"
+            android:label="NetworkChangeReceiver" >
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="services.OfflineMessagingService"
+            android:enabled="true" />
+    </application>
+
+</manifest>

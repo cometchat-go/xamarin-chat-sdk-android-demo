@@ -1,0 +1,1 @@
+<com.inscripts.Keyboards.extensions.ViewPagerTabButton android:layout_width="45dip" android:layout_height="45dip" android:background="#F5F5F5" android:gravity="center" android:paddingTop="15dip" android:textColor="#FFF" android:textStyle="bold" xmlns:android="http://schemas.android.com/apk/res/android" />

@@ -1,0 +1,1 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:yourapp="http://schemas.android.com/apk/res-auto"><item android:id="@+id/custom_refresh_bot_menu" android:icon="@drawable/cc_ic_refresh_button" android:showAsAction="always" android:title="Refresh bot list" yourapp:showAsAction="always" /></menu>

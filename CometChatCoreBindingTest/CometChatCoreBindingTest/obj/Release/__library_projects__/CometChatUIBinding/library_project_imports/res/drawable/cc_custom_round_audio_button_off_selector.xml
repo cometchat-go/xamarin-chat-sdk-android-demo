@@ -1,0 +1,7 @@
+<!--<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/cc_ic_audio" android:state_pressed="true"/>
+    <item android:drawable="@drawable/cc_custom_round_audio_on_button_pressed" android:state_focused="true"/>
+    <item android:drawable="@drawable/cc_custom_round_audio_on_button"/>
+
+</selector>--><selector xmlns:android="http://schemas.android.com/apk/res/android"><item android:state_pressed="true"><layer-list><item><shape android:shape="oval"><solid android:color="@color/colorAVButtonPressed" /></shape></item><item android:bottom="10dp" android:drawable="@drawable/cc_ic_microphone_muted" android:left="10dp" android:right="10dp" android:top="10dp" /></layer-list></item><item android:state_focused="true"><layer-list><item><shape android:shape="oval"><solid android:color="@color/colorAVButtonPressed" /></shape></item><item android:bottom="10dp" android:drawable="@drawable/cc_ic_microphone_muted" android:left="10dp" android:right="10dp" android:top="10dp" /></layer-list></item><item><layer-list><item><shape android:shape="oval"><solid android:color="@color/colorAVButton" /></shape></item><item android:bottom="10dp" android:drawable="@drawable/cc_ic_microphone_muted" android:left="10dp" android:right="10dp" android:state_pressed="true" android:top="10dp" /></layer-list></item></selector>
