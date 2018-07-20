@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, Click Me!</string>
+    <string name="app_name">CometChatSample</string>
+    <string name="text_login_superhero1">SUPERHERO1</string>
+    <string name="text_login_superhero2">SUPERHERO2</string>
+    <string name="text_initialize_chat">INITIALISE COMETCHAT</string>
+    <string name="text_launch_chat">LAUNCH COMETCHAT</string>
+</resources>
