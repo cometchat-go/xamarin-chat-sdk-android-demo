@@ -200,6 +200,9 @@ namespace CometChatSample
         private void ChatroomInfo(JSONObject onChatroomInfo)
         {
             System.Console.WriteLine("LaunchCometChat onChatroomInfo" + onChatroomInfo.ToString());
+            String push_channel = onChatroomInfo.GetString("push_channel");
+            System.Console.WriteLine("LaunchCometChat push_channel " + push_channel);
+            FirebaseMessaging.Instance.SubscribeToTopic(push_channel);
         }
 
         private void failCall(JSONObject fail)
