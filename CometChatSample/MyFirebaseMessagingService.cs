@@ -15,7 +15,7 @@ namespace CometChatSample
         const string TAG = "MyFirebaseMsgService Firebase";
         public override void OnMessageReceived(RemoteMessage message)
         {
-			CCNotificationHelper.ProcessCCNotificationData(this,message,Resource.Drawable.cometchat_logo,Resource.Drawable.cometchat_logo);
+			CCNotificationHelper.ProcessCCNotificationData(this,message,false,Resource.Drawable.cometchat_logo,Resource.Drawable.cometchat_logo);
         }
     }
 }
